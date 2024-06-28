@@ -1,0 +1,30 @@
+{
+  "name": "npm-typescript-package-boilerplate",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "scripts": {
+    "test:watch": "vitest --watch --reporter=verbose",
+    "test": "vitest run",
+    "build": "rm -rf dist && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc --outDir dist/esm",
+    "build:cjs": "tsc --module CommonJs --outDir dist/cjs"
+  },
+  "keywords": [],
+  "author": "aadilmallick",
+  "license": "ISC",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "module": "dist/esm/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.2",
+    "vitest": "^1.6.0"
+  },
+  "repository": {
+    "type": "git"
+  }
+}
